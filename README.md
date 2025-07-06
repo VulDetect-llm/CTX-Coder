@@ -45,7 +45,7 @@
 pip3 install -r requirements.txt
 ```
 
-## Data Collection
+## Call Graph Data Collection
 
 If you want to collect your own call graph dataset, use the following steps:
 1. Download the github projects into a directory `root`.
@@ -56,17 +56,18 @@ bash doxygen.sh
 
 Note: please replace the root directory in doxygen.sh
 ```
-3. Extract the function and format into json str using the python script: `python extract_doxygen.py`
+3. Extract the function and format into json str using the python script: `python extract_doxygen.py`. It will output json files.
 
 
-View available models:
-
-`pentestgpt --models`
-
-Current models include 
-- OpenAI: gpt-4o (default), o3, o4-mini, gpt4all
-- Gemini: gemini-2.5-flash, gemini-2.5-pro
-- Deepseek: deepseek-r1, deepseek-v3
+## CTX-VUL
+### Dataset Format
+The CTX-Vul dataset is a dataset contains contextual functions of a vulnerable function.
+We format it in the following json string:
+```json
+{
+    "index_to_funcname": {"0": "<func1>", "1": "<func2>"}
+}
+```
 
 
 ## Usage
