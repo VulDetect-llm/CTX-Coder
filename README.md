@@ -56,6 +56,8 @@ bash doxygen.sh
 
 Note: please replace the root directory in doxygen.sh
 ```
+3. Extract the function and format into json str using the python script: `python extract_doxygen.py`
+
 
 View available models:
 
