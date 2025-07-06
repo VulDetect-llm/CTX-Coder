@@ -60,7 +60,6 @@ Note: please replace the root directory in doxygen.sh
 
 
 ## CTX-VUL
-### Dataset Format
 The CTX-Vul dataset is a dataset contains contextual functions of a vulnerable function.
 We format it in the following json string:
 ```json
@@ -73,6 +72,19 @@ We format it in the following json string:
 ```
 > [!NOTE] 
 > The  0 function is the target function.
+
+The dataset can download from [CTX-Vul]()
+
+## CTX-Coder
+### Training
+We provide the training scripts in ctx_coder/train_ctxcoder.py, to use this script please fill the `MODEL_PATH`, `LLAMA_3_PATH`, and `OUTPUT_PATH`.
+You can train the model using the following command:
+```
+deepspeed ctx_coder/train_ctxcoder.py
+``` 
+
+### Inference
+To inference the model, we provide a pipeline.
 
 
 
