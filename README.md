@@ -73,7 +73,9 @@ We format it in the following json string:
 > [!NOTE] 
 > The  0 function is the target function.
 
-The dataset can download from [CTX-Vul]()
+The dataset can download from [CTX-Vul]().
+> [!NOTE] 
+> The dataset is comming soon!
 
 ## CTX-Coder
 ### Training
@@ -84,7 +86,12 @@ deepspeed ctx_coder/train_ctxcoder.py
 ``` 
 
 ### Inference
-To inference the model, we provide a pipeline.
+We provide a pipeline, you can just replace the trained checkpoint and dataset for inference. Using the following command:
+```
+python ctx_coder/pipeline.py
+```
+
+
 
 
 
