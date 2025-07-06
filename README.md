@@ -65,9 +65,15 @@ The CTX-Vul dataset is a dataset contains contextual functions of a vulnerable f
 We format it in the following json string:
 ```json
 {
-    "index_to_funcname": {"0": "<func1>", "1": "<func2>"}
+    "index_to_funcname": {"0": "<func1_name>", "1": "<func2_name>"},
+    "adj": ["# a n*n Matrix of the call relationships, A_{ij} = 1 means the function i is called by j"], 
+    "index_to_code": {"0": "<func1_code>", "1": "<func2_code>"},
+    "vul_type": "Vulnerable/Not Vulnerable"
 }
 ```
+> [!NOTE] 
+> The  0 function is the target function.
+
 
 
 ## Usage
