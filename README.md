@@ -72,10 +72,8 @@ We format it in the following json string:
 ```
 > [!NOTE] 
 > The  0 function is the target function.
+> The dataset and checkpoint is comming soon!
 
-The dataset can download from [CTX-Vul]().
-> [!NOTE] 
-> The dataset is comming soon!
 
 ## CTX-Coder
 ### Training
@@ -90,6 +88,13 @@ We provide a pipeline, you can just replace the trained checkpoint and dataset f
 ```
 python ctx_coder/pipeline.py
 ```
+
+## Evaluation
+- To evaluate CTX-Coder, you should generate fisrst the result using `pipeline.py`. Then evaluate the result using `evaluation/test.py`.
+
+- For code document generation, we use the default dataset of [CodeBert](https://github.com/microsoft/CodeBERT/tree/master) and use the official code of [Big-Code](https://github.com/bigcode-project/bigcode-evaluation-harness).
+
+- CrossCodeEval: project url https://github.com/amazon-science/cceval.
 
 
 
